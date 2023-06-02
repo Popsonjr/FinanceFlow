@@ -1,8 +1,9 @@
-import React from 'react'
 
-const Button = () => {
+const Button = ({ buttonStyles, buttonText }) => {
   return (
-    <div>Button</div>
+    <button type="button" className={`${buttonStyles} uppercase rounded-[80px] px-[32px]`}>
+      {buttonText ? buttonText : "download app"}
+    </button>
   )
 }
 

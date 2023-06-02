@@ -1,12 +1,14 @@
 import { logo, menu, close } from "../assets";
 import { NavLinks } from "../constants";
 import { useState } from "react";
+import styles from "../style";
+import Button from "./Button";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="w-full text-white p-[24px] md:py-[33px] md:px-[133px]">
+    <nav className={`w-full ${styles.padding}`}>
       <div className="hidden md:flex justify-between items-center">
         <div className="flex justify-items-center items-center">
           <img className="w-[154px] h-[30px] mr-[27px]" src={logo} />
@@ -22,9 +24,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex justify-items-center items-center">
-          <button className="bg-secondary h-[56px] w- [210px] uppercase rounded-[80px] px-[32px]">
-            Download app
-          </button>
+          <Button buttonStyles="bg-secondary h-[56px]" />
         </div>
       </div>
 
@@ -37,14 +37,20 @@ const Navbar = () => {
         />
       </div>
 
-      <div className={!toggle ? "hidden" : ""}>
-        <ul className="flex flex-col uppercase font-medium text-[32px] leading-4 items-center">
-          {NavLinks.map((link) => (
-            <li className="pt-[27px]" key={link.id}>
+      <div className={`md:hidden w-[100%] h-[100%] relative ${!toggle ? "hidden" : ""}`}>
+        <ul className="flex flex-col uppercase text-[32px] items-center">
+          {NavLinks.map((link, index) => (
+            <li className={`z-[5] mt-[40px] h-[32px] leading-[100%] tracking-[1.4px] ${index == NavLinks.length - 1 ? 'mb-[40px]' : ''}`} key={link.id}>
               {link.title}
             </li>
           ))}
+          <div className="flex justify-items-center items-center">
+            <Button buttonStyles="z-[5] bg-secondary w-[300px] h-[70px] text-[16px] mb-[40px]" />
+          </div>
         </ul>
+
+        <div className="absolute w-[70%] h-[50%] bottom-[30%] left-[20%] rounded-full green__gradient z-[0]"></div>
+        
       </div>
     </nav>
   );

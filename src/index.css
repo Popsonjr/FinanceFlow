@@ -20,3 +20,8 @@
   -webkit-text-size-adjust: 100%; */
 }
 
+.green__gradient {
+  background: linear-gradient(90deg, #bbd573 0%, #88B702 100%);
+  filter: blur(900px);
+}
+
