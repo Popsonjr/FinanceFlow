@@ -5,9 +5,9 @@ import { hero_laptop, mobile_hero_laptop } from '../assets'
 
 const Hero = () => {
   return (
-    <section className={`${layout.section} min-h-[760px] flex-col md:flex-row`}>
+    <section className={`${layout.section} min-h-[760px] flex-col md:flex-row md:items-center`}>
       <div className='flex-1'>
-        <h1 className={`${styles.h1}`}>Buy, trade, and hold <br /> 350+ cryptocurrencies</h1>
+        <h1 className={`${styles.h1} md:min-w-[738px]`}>Buy, trade, and hold <br className='hidden md:block'/> 350+ cryptocurrencies</h1>
         <p className={`${styles.paragraph} max-w-[568px]`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aenean dis placerat.</p>
 
         <div className='my-[28px] flex flex-col gap-[28px] md:flex-row'>
@@ -16,9 +16,9 @@ const Hero = () => {
         
         </div>
       </div>
-      <div className=''>
-        <img className='hidden md:block object-contain absolute top-[218px] right-[-160px] w-[971px] h-[585px]' alt='hero-image' src={hero_laptop} />
-        <img className='md:hidden object-contain w-[358px] h-[215px]' alt='hero-image' src={mobile_hero_laptop} />
+      <div className='flex-1 justify-center w-full h-full'>
+        <img className='hidden md:block object-contain absolute top-[218px] w-max-[971px] h-max-[585px]' alt='hero-image' src={hero_laptop} />
+        <img className='md:hidden object-contain w-full min-w-[358px] min-h-[215px]' alt='hero-image' src={mobile_hero_laptop} />
       </div>
 
     </section>
