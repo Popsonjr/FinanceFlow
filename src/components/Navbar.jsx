@@ -38,18 +38,18 @@ const Navbar = () => {
       </div>
 
       <div className={`md:hidden w-[100%] h-[100%] relative ${!toggle ? "hidden" : ""}`}>
-        <ul className="flex flex-col uppercase text-[32px] items-center">
+        <ul className="bg-primary w-full flex flex-col uppercase text-[32px] items-center absolute z-[5]">
           {NavLinks.map((link, index) => (
             <li className={`z-[5] mt-[40px] h-[32px] leading-[100%] tracking-[1.4px] ${index == NavLinks.length - 1 ? 'mb-[40px]' : ''}`} key={link.id}>
               {link.title}
             </li>
           ))}
           <div className="flex justify-items-center items-center">
-            <Button buttonStyles="z-[5] bg-secondary w-[300px] h-[70px] text-[16px] mb-[40px]" />
+            <Button buttonStyles="z-[5] bg-secondary w-[300px] h-[70px] text-[16px] mb-[80px]" />
           </div>
+          <div className="absolute w-[70%] h-[50%] bottom-[30%] left-[20%] rounded-full green__gradient z-[5]"></div>
+          <div className="absolute w-[70%] h-[50%] bottom-[30%] left-[20%] rounded-full green__gradient z-[5]"></div>
         </ul>
-
-        <div className="absolute w-[70%] h-[50%] bottom-[30%] left-[20%] rounded-full green__gradient z-[0]"></div>
         
       </div>
     </nav>

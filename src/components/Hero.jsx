@@ -1,4 +1,4 @@
-import React from 'react'
+
 import styles, { layout } from '../style'
 import Button from './Button'
 import { hero_laptop, mobile_hero_laptop } from '../assets'
@@ -17,9 +17,11 @@ const Hero = () => {
         </div>
       </div>
       <div className='flex-1 justify-center w-full h-full'>
-        <img className='hidden md:block object-contain absolute top-[218px] w-max-[971px] h-max-[585px]' alt='hero-image' src={hero_laptop} />
+        <img className='hidden md:block object-contain absolute top-[218px] w-max-[971px] h-max-[585px] z-[1]' alt='hero-image' src={hero_laptop} />
+        <div className="absolute w-[30%] h-[30%] bottom-[0%] right-[0%] rounded-full green__gradient"></div>
         <img className='md:hidden object-contain w-full min-w-[358px] min-h-[215px]' alt='hero-image' src={mobile_hero_laptop} />
       </div>
+      
 
     </section>
   )
