@@ -9,7 +9,8 @@ module.exports = {
         secondary: "#88B702",
         dimWhite: "rgba(255, 255, 255, 0.7)",
         dimBlue: "rgba(9, 151, 124, 0.1)",
-        buttonDimBlack: "rgba(255, 255, 255, 0.1)"
+        buttonDimBlack: "rgba(255, 255, 255, 0.1)",
+        cardBoxTransparent: "rgba(255, 255, 255, 0.1)",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
